@@ -32,7 +32,7 @@ void adjust_duty(){
   incoming_speed = Serial.parseFloat();
   if (incoming_speed >= 100 - MAX_DUTY & incoming_speed <= 100 - MIN_DUTY){
     Timer1.setPwmDuty(FAN_PIN, calc_duty(incoming_speed));
-    Serial.print("duty set: ");
+    Serial.print("speed set: ");
     Serial.println(incoming_speed, DEC);
   }
 }
